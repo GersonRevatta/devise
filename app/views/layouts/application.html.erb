@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- siguiendo este tuto para hacer las
+  la refactorizacion de html 
+  http://www.peoplecancode.com/es/tutorials/simple-refactoring-of-html -->
+    <title>CustomizerDevise</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+  <%= render 'layouts/menu' %>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>
